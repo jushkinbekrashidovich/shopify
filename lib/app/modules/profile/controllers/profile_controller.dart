@@ -1,9 +1,10 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class ProfileController extends GetxController {
   //TODO: Implement ProfileController
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -16,5 +17,21 @@ class ProfileController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
+
+   Future<void> googlesignIn() async{
+    final googlesignIn =GoogleSignIn();
+    final googleAccount = googlesignIn.signIn();
+
+    if(googleAccount != null){
+      try{
+
+      }on FirebaseException catch(e){
+
+      }catch(e){
+
+      }finally{
+        
+      }
+    }
+   }
 }

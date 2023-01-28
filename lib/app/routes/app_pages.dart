@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import 'package:shopify/app/modules/auth/bindings/auth_binding.dart';
+import 'package:shopify/app/modules/auth/views/auth_view.dart';
 import 'package:shopify/app/modules/home/bindings/home_binding.dart';
 import 'package:shopify/app/modules/home/views/home_view.dart';
 import 'package:shopify/app/modules/main/bindings/main_binding.dart';
@@ -36,6 +38,11 @@ class AppPages {
       name: _Paths.MAIN,
       page: () => MainView(),
       binding: MainBinding(),
+    ),
+    GetPage(
+      name: _Paths.AUTH,
+      page: () => AuthView(),
+      binding: AuthBinding(),
     ),
   ];
 }

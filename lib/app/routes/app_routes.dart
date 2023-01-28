@@ -8,6 +8,7 @@ abstract class Routes {
   static const SUBSCRIPTION = _Paths.SUBSCRIPTION;
   static const PROFILE = _Paths.PROFILE;
   static const MAIN = _Paths.MAIN;
+  static const AUTH = _Paths.AUTH;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const SUBSCRIPTION = '/subscription';
   static const PROFILE = '/profile';
   static const MAIN = '/main';
+  static const AUTH = '/auth';
 }
