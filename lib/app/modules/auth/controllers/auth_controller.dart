@@ -1,11 +1,19 @@
+
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
+import '../../../const/custom_full_screen.diolog.dart';
+import '../../splash/controllers/splash_controller.dart';
 
 class AuthController extends GetxController {
-  //TODO: Implement AuthController
+  SplashController splashController = Get.find<SplashController>();
+  
 
-  final count = 0.obs;
+
   @override
-  void onInit() {
+  void onInit() async {
     super.onInit();
   }
 
@@ -16,5 +24,21 @@ class AuthController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
+
+  void login() async {
+    CustomFullScreenDialog.showDialog();
+    GoogleSignInAccount? googleSignInAccount =
+        await splashController.googleSignIn.signIn();
+    if (googleSignInAccount == null) {
+      CustomFullScreenDialog.cancelDialog();
+    } else {
+      GoogleSignInAuthentication googleSignInAuthentication =
+          await googleSignInAccount.authentication;
+      OAuthCredential oAuthCredential = GoogleAuthProvider.credential(
+          accessToken: googleSignInAuthentication.accessToken,
+          idToken: googleSignInAuthentication.idToken);
+      await splashController.firebaseAuth.signInWithCredential(oAuthCredential);
+      CustomFullScreenDialog.cancelDialog();
+    }
+  }
 }

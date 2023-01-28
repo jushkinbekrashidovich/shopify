@@ -1,5 +1,4 @@
-import 'package:bookhub/app/core/custom_widgets/custom_button/custom_button.dart';
-import 'package:bookhub/app/routes/app_pages.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +7,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../core/theme/app_colors.dart';
+import '../../../const/app_colors.dart';
 import '../controllers/auth_controller.dart';
 
 class AuthView extends GetView<AuthController> {
@@ -20,71 +19,7 @@ class AuthView extends GetView<AuthController> {
             elevation: 0,
             backgroundColor: AppColors.background,
             automaticallyImplyLeading: false,
-            actions: [
-              IconButton(
-                  onPressed: () {
-                    showCupertinoDialog(
-                        barrierDismissible: true,
-                        context: context,
-                        builder: (context) {
-                          return CupertinoAlertDialog(
-                            content: CupertinoTextField(
-                              placeholder: 'enter password',
-                              controller: controller.passwordController,
-                            ),
-                            actions: [
-                              CupertinoDialogAction(
-                                  child: Text('submit'),
-                                  onPressed: () {
-                                    if (controller.passwordController.text ==
-                                        '20022007') {
-                                      Get.offAllNamed(Routes.MAIN,);
-                                    } else {
-                                      Get.snackbar('Error',
-                                          'Please enter password correctly');
-                                    }
-                                  }),
-                            ],
-                          );
-                        });
-                  },
-                  icon: Icon(Icons.info)),
-              IconButton(
-                  onPressed: () {
-                    showCupertinoDialog(
-                        barrierDismissible: true,
-                        context: context,
-                        builder: (context) {
-                          return CupertinoAlertDialog(
-                            content: Text(
-                              "Select language".tr,
-                              style: TextStyle(fontSize: 20),
-                            ),
-                            actions: [
-                              CupertinoDialogAction(
-                                  child: Text("O'zbekcha"),
-                                  onPressed: () {
-                                    controller.changeLanguage('uz', 'UZ');
-                                    Get.back();
-                                  }),
-                              CupertinoDialogAction(
-                                  child: Text('English'),
-                                  onPressed: () {
-                                    controller.changeLanguage('en', 'EN');
-                                    Get.back();
-                                  }),
-                              CupertinoDialogAction(
-                                  child: Text('Русский'),
-                                  onPressed: () {
-                                    controller.changeLanguage('ru', 'RU');
-                                    Get.back();
-                                  }),
-                            ],
-                          );
-                        });
-                  },
-                  icon: Icon(Icons.language)),
-            ],
+           
           ),
           body: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -110,7 +45,7 @@ class AuthView extends GetView<AuthController> {
                           height: 10,
                         ),
                         Text(
-                          'bookhub',
+                          'Shop with Shopify',
                           style: GoogleFonts.comfortaa(
                               fontSize: 34,
                               color: AppColors.mainColor,
@@ -120,7 +55,7 @@ class AuthView extends GetView<AuthController> {
                       ],
                     ),
                     Text(
-                      'Bookhub is an online marketplace application that helps people buy, sell, and exchange books. In addition, new original books are available for an affordable price.'
+                      'Welcome to Shopify!'
                           .tr,
                       style: const TextStyle(
                           fontSize: 13, fontWeight: FontWeight.w300),
@@ -154,14 +89,14 @@ class AuthView extends GetView<AuthController> {
                             Container(
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: AppColors.white,
+                                color: Colors.white,
                               ),
                               height: 35,
                               width: 35,
                               child: SizedBox(
                                   height: 18,
                                   width: 18,
-                                  child:Icon(Icons.telegram),),
+                                  child:SvgPicture.asset("assets/google.svg")),
                             ),
                             SizedBox(
                               width: 10,
@@ -169,7 +104,7 @@ class AuthView extends GetView<AuthController> {
                             Text(
                               'Continue with Google'.tr,
                               style: TextStyle(
-                                  color: AppColors.white, fontSize: 15),
+                                  color: Colors.white, fontSize: 15),
                             ),
                           ],
                         ),
