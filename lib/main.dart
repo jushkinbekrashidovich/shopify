@@ -14,6 +14,7 @@ void main() {
       getPages: AppPages.routes,
        initialBinding: MainBinding(),
        theme: AppThemes.light,
+       debugShowCheckedModeBanner: false,
     ),
   );
 }

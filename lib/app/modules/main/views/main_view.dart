@@ -7,6 +7,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopify/app/modules/home/views/home_view.dart';
+import 'package:shopify/app/modules/profile/views/profile_view.dart';
 import 'package:shopify/app/modules/subscription/views/subscription_view.dart';
 
 import '../../../const/app_colors.dart';
@@ -22,6 +23,7 @@ class MainView extends GetView<MainController> {
                 children: [
                  HomeView(),
                  SubscriptionView(),
+                 ProfileView(),
                 ],
               ),
               bottomNavigationBar: BottomNavigationBar(
