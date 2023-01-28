@@ -9,7 +9,7 @@ class Products {
   String? company;
 
   
- // bool? isExchange;
+ 
 
   Products(
       {
@@ -30,8 +30,7 @@ class Products {
     priceBefore = json['priceBefore'];
     company = json['company'];
    
-    //isExchange = json['isExchange'];
-  }
+    }
 
  
 }

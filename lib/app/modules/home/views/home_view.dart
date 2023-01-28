@@ -284,32 +284,38 @@ class HomeView extends GetView<HomeController> {
                                           SizedBox(
                                             height: 10,
                                           ),
-                                          Container(
-                                            padding: EdgeInsets.symmetric(
-                                                horizontal: 10),
-                                            height: 30,
-                                            width: 120,
-                                            decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(5),
-                                                color: AppColors.mainActiveColor),
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Icon(
-                                                  Icons.shopping_bag,
-                                                  size: 20,
-                                                ),
-                                                SizedBox(
-                                                  width: 4,
-                                                ),
-                                                Text(
-                                                  "Subscribe",
-                                                  style: TextStyle(
-                                                      color: AppColors.white),
-                                                )
-                                              ],
+                                          InkWell(
+                                            onTap: ()async{
+                                              print(index);
+                                              controller.addFavorite(index);
+                                            },
+                                            child: Container(
+                                              padding: EdgeInsets.symmetric(
+                                                  horizontal: 10),
+                                              height: 30,
+                                              width: 120,
+                                              decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(5),
+                                                  color: AppColors.mainActiveColor),
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Icon(
+                                                    Icons.shopping_bag,
+                                                    size: 20,
+                                                  ),
+                                                  SizedBox(
+                                                    width: 4,
+                                                  ),
+                                                  Text(
+                                                    "Subscribe",
+                                                    style: TextStyle(
+                                                        color: AppColors.white),
+                                                  )
+                                                ],
+                                              ),
                                             ),
                                           ),
                                         ],

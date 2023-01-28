@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import 'package:shopify/app/modules/add_product/bindings/add_product_binding.dart';
+import 'package:shopify/app/modules/add_product/views/add_product_view.dart';
 import 'package:shopify/app/modules/auth/bindings/auth_binding.dart';
 import 'package:shopify/app/modules/auth/views/auth_view.dart';
 import 'package:shopify/app/modules/home/bindings/home_binding.dart';
@@ -50,6 +52,11 @@ class AppPages {
       name: _Paths.SPLASH,
       page: () => SplashView(),
       binding: SplashBinding(),
+    ),
+    GetPage(
+      name: _Paths.ADD_PRODUCT,
+      page: () => AddProductView(),
+      binding: AddProductBinding(),
     ),
   ];
 }

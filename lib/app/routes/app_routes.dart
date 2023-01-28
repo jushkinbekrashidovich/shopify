@@ -10,6 +10,7 @@ abstract class Routes {
   static const MAIN = _Paths.MAIN;
   static const AUTH = _Paths.AUTH;
   static const SPLASH = _Paths.SPLASH;
+  static const ADD_PRODUCT = _Paths.ADD_PRODUCT;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const MAIN = '/main';
   static const AUTH = '/auth';
   static const SPLASH = '/splash';
+  static const ADD_PRODUCT = '/add-product';
 }

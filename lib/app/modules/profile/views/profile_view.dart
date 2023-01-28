@@ -9,6 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../const/app_colors.dart';
 import '../../../const/custom_title.dart';
+import '../../../routes/app_pages.dart';
 import '../controllers/profile_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
@@ -63,7 +64,10 @@ class ProfileView extends GetView<ProfileController> {
                   height: 20,
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(Routes.ADD_PRODUCT);
+
+                  },
                   child: Container(
                     margin: EdgeInsets.symmetric(horizontal: 20),
                     height: 55,
