@@ -6,6 +6,9 @@ class AddProducts {
   String? company_name;
   String? description;
 
+  String? discount_time;
+  String? image_url;
+
   AddProducts({
     this.title,
     this.priceAfter,
@@ -13,6 +16,8 @@ class AddProducts {
     this.userToken,
     this.company_name,
     this.description,
+    this.discount_time,
+    this.image_url,
   });
 
   Map<String, dynamic> toJson() {
@@ -23,6 +28,9 @@ class AddProducts {
     data['userToken'] = userToken;
     data['company'] = company_name;
     data['description'] = description;
+    data['image_url'] = image_url;
+    data['discount_time'] = discount_time;
+    
     
     return data;
   }

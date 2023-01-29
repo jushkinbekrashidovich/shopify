@@ -22,43 +22,38 @@ class AuthView extends GetView<AuthController> {
            
           ),
           body: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
                 height: 163,
                 //color: Colors.blue,
                 padding: EdgeInsets.only(top: 10, left: 15, right: 15),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
                           'Welcome to'.tr,
                           style: const TextStyle(
-                              fontSize: 22, color: AppColors.mainColor),
+                              fontSize: 20, color: AppColors.mainColor),
                         ),
                         SizedBox(
                           height: 10,
                         ),
                         Text(
-                          'Shop with Shopify',
+                          'Shopify',
                           style: GoogleFonts.comfortaa(
-                              fontSize: 34,
+                              fontSize: 25,
                               color: AppColors.mainColor,
                               letterSpacing: 2,
                               fontWeight: FontWeight.bold),
                         ),
                       ],
-                    ),
-                    Text(
-                      'Welcome to Shopify!'
-                          .tr,
-                      style: const TextStyle(
-                          fontSize: 13, fontWeight: FontWeight.w300),
                     ),
                   ],
                 ),

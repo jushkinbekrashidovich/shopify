@@ -15,6 +15,10 @@ class AddProductController extends GetxController {
   TextEditingController price_afterController = TextEditingController();
   TextEditingController price_beforeController = TextEditingController();
 
+  TextEditingController description= TextEditingController();
+  TextEditingController image_url= TextEditingController();
+  TextEditingController discount= TextEditingController();
+
   FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
 
   final count = 0.obs;
@@ -39,7 +43,9 @@ class AddProductController extends GetxController {
     addProducts.title = product_titleController.text.toString();
     addProducts.priceAfter = price_afterController.text.toString();
     addProducts.priceBefore = price_beforeController.text.toString();
-    addProducts.description = 'a';
+    addProducts.description = description.text.toString();
+    addProducts.discount_time = discount.text.toString();
+    addProducts.image_url = image_url.text.toString();
     await firebaseFirestore.collection("products").add(addProducts.toJson());
     print("object");
     var favoriteProducts =

@@ -25,9 +25,9 @@ class SplashView extends GetView<SplashController> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 100,
-                  width: 80,
-                  child: Image.asset('assets/product.png')),
+                  height: 200,
+                  width: 180,
+                  child: Image.asset('assets/logo.png')),
                
                 Text(
                   'Shopify',

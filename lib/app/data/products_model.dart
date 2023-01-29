@@ -7,6 +7,9 @@ class Products {
   String? priceAfter;
 
   String? company;
+  
+  String? discount_time;
+  String? image_url;
 
   
  
@@ -19,6 +22,9 @@ class Products {
       this.priceAfter,
       this.priceBefore,
       this.company,
+      this.discount_time,
+      this.image_url,
+      this.id
       
       
       });
@@ -28,7 +34,9 @@ class Products {
     description = json['description'];
     priceAfter = json['priceAfter'];
     priceBefore = json['priceBefore'];
-    company = json['company'];
+    discount_time = json['discount_time'];
+    image_url = json['image_url'];
+     company = json['company'];
    
     }
 
