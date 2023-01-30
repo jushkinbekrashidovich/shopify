@@ -2,6 +2,8 @@
 
 Shopify is an app that shows best prices/discounts of products in the different markets. 
 
+# The app is built in 2 day "Open Data Challenge" hackathon
+
 # Features
 1. List of dicount products
 2. Subscription - when user subscribe the specific product, the user will be notified in the case of new product comes up with lower price than previous
