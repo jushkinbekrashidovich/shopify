@@ -16,6 +16,8 @@ Shopify is an app that shows best prices/discounts of products in the different 
 
 ## Screenshots
 
+<img src="[https://camo.githubusercontent.com/...](https://user-images.githubusercontent.com/91821159/215493563-5cbc1715-3b19-4624-9b6f-a32e7569d487.png)" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="200" />
+
 ![image](https://user-images.githubusercontent.com/91821159/215493563-5cbc1715-3b19-4624-9b6f-a32e7569d487.png)
 
 ![image](https://user-images.githubusercontent.com/91821159/215491938-934b781a-158a-43d3-b84a-ac96c8e824d4.png)
